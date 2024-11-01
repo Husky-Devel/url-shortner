@@ -16,7 +16,15 @@ export const GET = withWorkspace(
         projectId: workspace.id,
       },
       select: {
-        hnzli: true,
+        dubsh: true,
+        dublink: true,
+        chatgpt: true,
+        sptifi: true,
+        gitnew: true,
+        callink: true,
+        amznid: true,
+        ggllink: true,
+        figpage: true,
       },
     });
 
@@ -52,11 +60,11 @@ export const PATCH = withWorkspace(
       await req.json(),
     );
 
-    if (workspace.plan === "free" && defaultDomains.includes("hnz.li")) {
+    if (workspace.plan === "free" && defaultDomains.includes("dub.link")) {
       throw new DubApiError({
         code: "forbidden",
         message:
-          "You can only use hnz.li on a Pro plan and above. Upgrade to Pro to use this domain.",
+          "You can only use dub.link on a Pro plan and above. Upgrade to Pro to use this domain.",
       });
     }
 
@@ -65,7 +73,15 @@ export const PATCH = withWorkspace(
         projectId: workspace.id,
       },
       data: {
-        hnzli: defaultDomains.includes("hnz.li"),
+        dubsh: defaultDomains.includes("dub.sh"),
+        dublink: defaultDomains.includes("dub.link"),
+        chatgpt: defaultDomains.includes("chatg.pt"),
+        sptifi: defaultDomains.includes("spti.fi"),
+        gitnew: defaultDomains.includes("git.new"),
+        callink: defaultDomains.includes("cal.link"),
+        amznid: defaultDomains.includes("amzn.id"),
+        ggllink: defaultDomains.includes("ggl.link"),
+        figpage: defaultDomains.includes("fig.page"),
       },
     });
 
