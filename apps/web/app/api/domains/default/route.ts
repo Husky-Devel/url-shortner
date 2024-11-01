@@ -16,15 +16,7 @@ export const GET = withWorkspace(
         projectId: workspace.id,
       },
       select: {
-        dubsh: true,
-        dublink: true,
-        chatgpt: true,
-        sptifi: true,
-        gitnew: true,
-        callink: true,
-        amznid: true,
-        ggllink: true,
-        figpage: true,
+        hnzli: true,
       },
     });
 
